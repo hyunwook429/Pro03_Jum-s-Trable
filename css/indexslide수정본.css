@@ -1,0 +1,120 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: #000;}
+.hidden {position: absolute; left: -9999px;}
+body{ font-family: 'Sunflower', sans-serif;}
+/* 이벤트 팝업 */
+.event_popup_wrap{display: none; position: fixed; top: 200px; left: 200px; width: 500px; z-index: 999;}
+.event_popup_wrap .eventpopup_top {position: relative;width: 500px; height: 470px; background: url(../images/event_pop.jpg) no-repeat center/cover;text-align: center;}
+.event_popup_wrap .eventpopup_top a {display: block; width: 500px; height: 470px; }
+.event_popup_wrap .eventpopup_top h1{padding: 50px; font-size: 40px;}
+.event_popup_wrap .eventpopup_top p{font-size: 30px; text-shadow: 0px 0px 5px #000; color: #fff;}
+.event_popup_wrap .eventpopup_top span{position: absolute; bottom: 50px; left: 170px; display: block; padding: 10px 40px;background: transparent; border: 1px solid tomato; color: tomato;}
+.eventpopup_bottom {position: relative; width: 500px; height: 30px; background: #000;}
+.eventpopup_bottom .closeforaday_wrap{position: absolute; right: 50px; top: 7px; color: #fff; font-size: 12px;}
+.eventpopup_bottom .closeforaday_wrap > * {cursor: pointer;}
+.eventpopup_bottom .popup_close{position: absolute; right: 10px; top: 8px; width: 13px; height: 13px; background: url(../images/icon_close.gif) no-repeat center/cover; cursor: pointer;}
+/* 사이드토글메뉴바 */
+.side_menu_wrap{position: relative; position:fixed; width: 300px; height: 100%; background: #fff; right: -361px; top: 0; padding: 30px; transition: all 1s; z-index: 999; border-left: 1px solid #ccc; }
+.side_menu_wrap.open{right: 0px;}
+.profile{width: 150px; height: 150px; border: 1px solid #71f281; border-radius: 50%; background: url(../images/profile.jpg) no-repeat center/cover; margin: 230px auto 40px;}
+.profile p{margin-top: 160px; text-align: center;}
+.customor_center{width: 100%; height: 100%;}
+.customor_center .customer{padding: 5px; margin-bottom: 10px; background: url(../images/bg_slash_01.png) repeat center/contain;}
+.customer_center_info > ul{height: 100px;}
+.customer_center_info > ul > li{position: relative; float: left;}
+.customer_center_info > ul > li::after{content:''; position: absolute; top: 20px; width: 70px; height: 2px; background: #ccc;}
+.customer_center_info > ul > li:first-child{margin-right: 20px;}
+.customor_center .inner_ul{margin-top: 5px;}
+.customor_center .customer_event ul{width: 300px; height: 100px;}
+.customor_center .customer_event ul li{width: 50%;float: left;text-align:left;margin-bottom: -1px;}
+.customor_center .customer_event ul li:nth-child(even){margin-left: -1px}
+.customor_center .customer_event ul li:hover{background:#ccc;}
+.customor_center .customer_event ul li a{display: block;padding: 10px;border:1px solid #ccc;}
+.customor_center .handle{position: absolute;width: 40px; height: 100px;top: 50%;left: -60px;background: #fff; padding: 10px; border-radius: 20px 0 0 20px;  cursor: pointer; border: 1px solid #ccc; border-right: none;}
+.customor_center .handle li{width: 20px; height: 100%; text-align: center;padding: 0 7px; margin: 0 auto; background:#93defa; border-radius: 10px 0 0 10px; line-height: 18px;}
+
+#header {width: 100%;height: 150px; }
+#header h1{width: 100px; height: 0;line-height: 50px; margin: 0 auto;}
+#header h1 a{color: #fff;}
+#header .header_top_wrap{width: 100%; background: #93defa; overflow: hidden;}
+#header .header_top {width: 1280px; height: 50px; margin: 0 auto;}
+#header .header_top span{color: #fff; float: left; line-height: 50px;}
+#header .header_top ul{float: right;}
+#header .header_top ul li{float: left; margin: 0 5px; line-height: 50px;}
+#header .header_top ul li a{color: #fff;}
+#header .header_top ul li a:hover{color:#aaa;}
+
+#header .header_bottom_wrap {position: relative;width: 100%; height: 100px; background: #fff; }
+#header .header_bottom_wrap.active{position: fixed; top: 0; z-index: 9999; border-bottom: 1px solid #ccc; height: 50px;}
+#header .header_bottom{width: 1280px; height: 100%; margin: 0 auto; }
+#header .header_bottom ul li a:hover{color: #4190d7;}
+#header .header_bottom > ul{float: left;}
+#header .header_bottom > ul > li{position: relative; float: left; font-size: 20px;}
+#header .header_bottom > ul > li > a{display: block;color: #000; padding: 0 40px; line-height: 100px;}
+#header .header_bottom.active > ul li > a{line-height: 50px;}
+#header .header_bottom > ul > li:hover .inner_ul{display:block;}
+#header .header_bottom .inner_ul{display:none;line-height: 40px; position: absolute; z-index: 1; background:#fff; font-size: 18px; left: 0px; border-bottom: 2px solid #93defa; box-shadow: 1px 2px 5px #000; width: 200px; letter-spacing: -1px; word-spacing: -1px;}
+#header .header_bottom .inner_ul li{}
+#header .header_bottom .inner_ul li a{display: block; text-align: left; padding: 10px;}
+#header .header_bottom .inner_ul li a:hover{background: #93defa; color:#fff; transition: all .3s ease 0s}
+#header .header_bottom .search_box{width: 300px; height: 100px;float: right;}
+#header .header_bottom .search_box input[type="text"]{width: 240px; height: 50px; margin-top: 25px; padding-left : 20px; padding-right: 40px; font-size: 16px;border:none; border-radius: 10px; background: rgba(0, 0, 0, 0.07);}
+
+.video_section{position: relative; top: 0; left: 0; width: 100%; height: 819px; overflow: hidden; background: #000; z-index: -1}
+.video_wrap .main-video {height: 100%;}
+.video_wrap .msg{position: absolute; width: 100%; bottom: 50px;text-align: center; color: #fff; text-shadow: 2px 2px 5px #000; font-family: none; font-weight: bold;}
+.video_wrap p:nth-child(1){font-size: 60px; letter-spacing: -1px; word-spacing: 10px; line-height: 60px; margin-bottom: 40px; text-transform: uppercase;}
+.video_wrap p:nth-child(2){font-size: 15px;}
+.video_wrap span.bold{ font-size: 30px;  text-transform: uppercase;}
+
+.product_slide_section{width: 100%; height: 869px; overflow: hidden; background: #fff;}
+.product_slide_section_wrap{position: relative;width: 100%; height: 700px;margin-top: 84.5px}
+.product_slide_section_wrap .slide{width: 100%; height: 100%; margin: 0 auto; z-index: 20;}
+.product_slide_section_wrap .slide ul li{width: 525px; height: 300px; position: absolute; border-radius: 40px; top: 60%; left: 50%; transform: translate(-50%, -50%); box-shadow: 6px 6px #373535}
+.product_slide_section_wrap .slide ul li:nth-child(1){top: 10%; left: 10%; transform: translate(-50%, -50%); opacity: 0}
+.product_slide_section_wrap .slide ul li:nth-child(2){top: 30%; left: 30%; transform: translate(-50%, -50%); opacity: 0.3;}
+.product_slide_section_wrap .slide ul li:nth-child(3){top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 1; width: 750px; z-index: 2}
+.product_slide_section_wrap .slide ul li:nth-child(4){top: 30%; left: 70%; transform: translate(-50%, -50%); opacity: 0.3;}
+.product_slide_section_wrap .slide ul li:nth-child(5){top: 10%; left: 90%; transform: translate(-50%, -50%); opacity: 0}
+.product_slide_section_wrap .slide ul li a{display: block; width: 100%; height: 100%; border-radius: 40px;}
+.product_slide_section_wrap .next{position: absolute; right: 200px; top: 50%; width: 100px; height: 100px; border:2px solid #000; border-radius: 50%; line-height: 100px; text-align: center; color: #000; font-size: 40px; cursor: pointer;}
+.product_slide_section_wrap .prev{position: absolute; left: 200px; top: 50%; width: 100px; height: 100px; border:2px solid #000; border-radius: 50%; line-height: 100px; text-align: center; color: #000; font-size: 40px; cursor: pointer;}
+
+.reviewer_section{width: 100%; height: 869px; overflow: hidden; background: linear-gradient( to bottom, #fff, rgba(147, 222, 250, 0.4) , #fff);}
+.reviewer_section .h2_wrap{position: relative;transition: all 1s ease 0s;font-size: 50px; width: 700px; margin: 0 auto; overflow: hidden; margin-top: 100px; margin-bottom: 100px;}
+.reviewer_section h2{position: relative; left: 50px; top: 100px;}
+.reviewer_section .h2_wrap:hover h2{top:0;}
+.reviewer_section .reviewer_section_wrap{display: table;width: 1280px; margin: 0 auto;}
+.reviewer_section_wrap > ul{}
+.reviewer_section_wrap > ul > li{display: table-cell; width: 33.3333%; padding: 0 10px;}
+.reviewer_section_wrap .img_wrap{width: 407px; height: 200px; overflow: hidden;}
+.reviewer_section_wrap .img_wrap > a{display: block;width: 100%; height: 100%; transition: all 1s ease 0s;}
+.reviewer_section_wrap .img_wrap > a:hover{transform: scale(1.1);}
+.reviewer_section_wrap .onepoint_wrap{position: relative; width: 100%; height: 100%; overflow: hidden;}
+.reviewer_section_wrap .onepoint_wrap a{position: relative; top: 40px; font-size: 18px; padding: 10px 0; display: inline-block}
+.reviewer_section_wrap .onepoint_wrap::before{display: none;position: absolute; left: 0; top: 32px;content:''; width: 20px; height: 1px; background: #000;}
+.reviewer_section_wrap .onepoint_wrap:hover::before{display:block;}
+.reviewer_section_wrap .h3_wrap{position: relative; overflow: hidden; width: 100%; height: 100%; }
+.reviewer_section_wrap h3{position: relative;font-size: 24px; padding-bottom: 15px; top: 50px;}
+.reviewer_section_wrap .p_wrap{position: relative; width: 100%; height: 100%; overflow: hidden;}
+.reviewer_section_wrap p{position: relative; top:150px; font-size: 20px; padding-bottom: 20px;}
+.reviewer_section_wrap .link_wrap{position: relative; width: 100%; height: 100%; overflow: hidden;}
+.reviewer_section_wrap .link{position: relative; top: 40px; width: 100%; height: 100%;}
+.reviewer_section_wrap .link li{float: left; margin-right: 10px;}
+.reviewer_section_wrap .link li a{padding: 5px 10px; border-radius: 30px; background: rgb(204, 204, 204, 0.5); transition: all 0.5s ease 0s;}
+.reviewer_section_wrap .link li a:hover{background:#000; color: #fff}
+
+.ceo_section{position: relative;width: 100%; height: 869px; overflow: hidden;}
+.ceo_section .ceo_background{position: relative;width: 100%; height: 100%;}
+.ceo_section .ceo_background ul{width: 1860px; height: 620px; margin: 0 auto; overflow:hidden;}
+.ceo_section .ceo_background ul li{float: left;width: 300px; height: 300px; margin: 5px;}
+.ceo_section .ceo_background .bg_cover{position: absolute;width: 100%; height: 100%; background: rgba(255,255,255,0.6); top: 0; left: 0;}
+.ceo_section .introduce_wrap{position: absolute; width: 600px; height: 600px; top: 150px; left: 300px; border:1px solid red;}
+/* position: absolute;
+    top: 0px;
+    left: calc(50% - 375px);
+    z-index: 2;
+    transform: translateX(261.5px) translateX(-25%) scale(0.85);
+    transition: all 450ms ease 0s; */
